@@ -36,9 +36,9 @@ showLoader() {
 
 outputName=${PWD##*/}
 
-rm text.csv
+rm "${outputName}.csv"
 
-echo "title|ingress|text" > "text.csv"
+echo "title|ingress|text" > "${outputName}.csv"
 
 for file in *.docx; do
 	echo -ne "  ${WHITE}Converting${NC} $file" &
